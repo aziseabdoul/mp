@@ -3,11 +3,11 @@ import {Router} from "@angular/router";
 import {HttpClient} from "@angular/common/http";
 
 @Component({
-  selector: 'app-login',
-  templateUrl: './login.component.html',
-  styleUrls: ['./login.component.css']
+  selector: 'app-register',
+  templateUrl: './register.component.html',
+  styleUrls: ['./register.component.css']
 })
-export class LoginComponent implements OnInit {
+export class RegisterComponent implements OnInit {
 
   model: any;
 
@@ -20,19 +20,17 @@ export class LoginComponent implements OnInit {
     sessionStorage.setItem('token', '');
   }
 
-  login() {
+  register() {
     this.http
-      .post("http://127.0.0.1:8080/api/login", {
+      .post("http://127.0.0.1:8080/register", {
         "username": this.model.username,
         "password": this.model.password,
       })
       .subscribe(() => {
-          let base64hash = btoa(this.model.username + ':' + this.model.password);
-          sessionStorage.setItem('token', base64hash);
-          this.router.navigate(["/calendar"])
+          this.router.navigate(["/login"])
         },
         error => {
-          alert(`Login failed: ${error}`)
+          alert(`Register failed: ${error}`)
         })
   }
 
