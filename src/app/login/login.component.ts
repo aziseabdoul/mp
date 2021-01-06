@@ -22,7 +22,7 @@ export class LoginComponent implements OnInit {
 
   login() {
     this.http
-      .post("http://127.0.0.1:8080/api/login", {
+      .post("http://127.0.0.1:8080/login", {
         "username": this.model.username,
         "password": this.model.password,
       })
