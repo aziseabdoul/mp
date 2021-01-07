@@ -1,3 +1,9 @@
 <p>calendar works!</p>
 
-<p *ngFor="let leave of leaves | async">{{leave.leaveType}}</p>
+<!--<p *ngFor="let leave of leaves | async">{{leave.leaveType}}</p>-->
+
+<select>
+    <option *ngFor="let leave of leaves | async">
+        {{leave.leaveType}}
+    </option>
+</select>

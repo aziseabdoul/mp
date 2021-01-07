@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
 })
 export class TypeOfLeaveService {
 
-  private baseUrl = 'http://localhost8080/leaves';
+  private baseUrl = 'http://localhost:8080/leaves';
 
   constructor(private http: HttpClient) { }
 
