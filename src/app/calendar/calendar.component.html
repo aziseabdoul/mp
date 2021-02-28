@@ -1,9 +1,57 @@
-<p>calendar works!</p>
-
 <!--<p *ngFor="let leave of leaves | async">{{leave.leaveType}}</p>-->
 
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        <h2>Nouvelle demande</h2>
+    </div>
+    <div class="panel-body">
+        <label for="day-select">Type de jour</label>
 <select>
     <option *ngFor="let leave of leaves | async">
         {{leave.leaveType}}
     </option>
 </select>
+
+<label for="start">Du:</label>
+    <input type="date" id="start" name="leave-start"
+       value="2021-02-26"
+       min="2021-01-01" max="2021-12-31">
+
+<label for="end">Au:</label>
+    <input type="date" id="start" name="leave-end"
+              value="2021-02-26"
+              min="2021-01-01" max="2021-12-31">
+
+<button class="btn btn-info">Envoyer</button>
+    </div>
+</div>
+
+<div class="panel panel-primary">
+    <div class="panel-heading">
+      <h2>Demandes en attente d'approbation</h2>
+    </div>
+    <div class="panel-body">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Type</th>
+            <th>Du</th>
+            <th>Au</th>
+            <th>Statut</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>congé</td>
+            <td>02/03/2021</td>
+            <td>03/03/2021</td>
+            <td>en cours</td>
+            <td><button class="btn btn-info" style="margin-left: 10px">Modifier</button>
+                <button class="btn btn-danger">Supprimer</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
