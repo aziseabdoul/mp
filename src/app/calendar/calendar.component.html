@@ -5,6 +5,7 @@
         <h2>Nouvelle demande</h2>
     </div>
     <div class="panel-body">
+        <form class="form-inline">
         <label for="day-select">Type de jour</label>
 <select>
     <option *ngFor="let leave of leaves | async">
@@ -23,6 +24,7 @@
               min="2021-01-01" max="2021-12-31">
 
 <button class="btn btn-info">Envoyer</button>
+</form>
     </div>
 </div>
 
