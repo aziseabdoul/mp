@@ -8,6 +8,7 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { CalendarComponent } from './calendar/calendar.component';
+import { ManagerComponent } from './manager/manager.component';
 
 export const appRouteList: Routes = [
     {
@@ -30,7 +31,8 @@ export const appRouteList: Routes = [
     AppComponent,
     LoginComponent,
     RegisterComponent,
-    CalendarComponent
+    CalendarComponent,
+    ManagerComponent
   ],
   exports: [
         RouterModule
