@@ -22,8 +22,12 @@ export const appRouteList: Routes = [
     {
       path: 'calendar',
       component: CalendarComponent
+    },
+    {
+      path: 'manager',
+      component: ManagerComponent
     }
-       
+    
 ];
 
 @NgModule({
